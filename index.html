@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نانوایی سنتی مشهد | نان سنگک و بربری تازه</title>
+<meta name="description" content="نان سنگک تازه، بربری داغ و نان های محلی مشهد. سفارش آنلاین و تحویل سریع در مشهد.">
+<style>
+:root { --bg: #ffffff; --fg: #111111; --accent: #111; --muted: #666; }
+body.dark { --bg: #0f0f0f; --fg: #f0f0f0; --accent: #f0f0f0; --muted: #aaa; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; transition: background .3s, color .3s; }
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #ddd; }
+.dark header { border-color: #333; }
+.logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; }
+.theme-toggle { background: none; border: 1px solid var(--fg); color: var(--fg); padding: .4rem .8rem; cursor: pointer; font-size: .85rem; }
+.hero { padding: 4rem 0 2rem; text-align: center; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 1rem; font-weight: 700; }
+.hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto 2rem; }
+.cta { display: inline-block; background: var(--accent); color: var(--bg); padding: .85rem 1.8rem; text-decoration: none; font-weight: 600; border: none; cursor: pointer; }
+.cta:hover { opacity: .85; }
+section { padding: 3rem 0; }
+h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.card { border: 1px solid #ddd; padding: 1.5rem; }
+.dark .card { border-color: #333; }
+.card h3 { margin-top: 0; }
+form { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 0 auto; }
+input, textarea, select { padding: .75rem; border: 1px solid #ccc; background: var(--bg); color: var(--fg); font: inherit; }
+.dark input, .dark textarea, .dark select { border-color: #444; }
+footer { text-align: center; padding: 2rem; border-top: 1px solid #ddd; color: var(--muted); font-size: .9rem; }
+.dark footer { border-color: #333; }
+@media (max-width: 600px) { .hero { padding: 2rem 0; } }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="logo">نانوایی سنتی مشهد</div>
+<button class="theme-toggle" onclick="document.body.classList.toggle('dark')">تم تیره/روشن</button>
+</header>
+<section class="hero">
+<h1>نان سنگک تازه<br>مستقیم از تنور</h1>
+<p>بربری داغ، سنگک بهترین و نان های محلی مشهد. هر روز صبح پخته می‌شود. تحویل در مشهد و حومه شهر.</p>
+<a href="#order" class="cta">سفارش امروز</a>
+</section>
+<section>
+<h2>محصولات ما</h2>
+<div class="grid">
+<div class="card"><h3>سنگک مشهدی</h3><p>نان سنگک تازه با کنجد و سیاه‌دانه. مناسب صبحانه.</p><p><strong>45,000 تومان</strong></p></div>
+<div class="card"><h3>بربری داغ</h3><p>بربری نرم و خوش‌عطر با کنجد خورده. محبوب خانواده‌ها.</p><p><strong>38,000 تومان</strong></p></div>
+<div class="card"><h3>نان تفتون</h3><p>نان تفتون محلی با کنجد و زیره. برای ناهار.</p><p><strong>32,000 تومان</strong></p></div>
+</div>
+</section>
+<section id="order">
+<h2>سفارش آنلاین</h2>
+<form onsubmit="alert('سفارش شما ثبت شد. به زودی تماس می‌گیریم.'); return false;">
+<input type="text" placeholder="نام و نام خانوادگی" required>
+<input type="tel" placeholder="شماره موبایل" required>
+<select required>
+<option value="">نوع نان</option>
+<option>سنگک</option>
+<option>بربری</option>
+<option>تفتون</option>
+</select>
+<input type="number" placeholder="تعداد" min="1" required>
+<textarea placeholder="آدرس تحویل در مشهد" rows="3" required></textarea>
+<button class="cta" type="submit">ثبت سفارش</button>
+</form>
+</section>
+<section>
+<h2>چرا ما؟</h2>
+<div class="grid">
+<div class="card"><h3>تازه هر روز</h3><p>نان ها صبح همان روز پخته می‌شوند.</p></div>
+<div class="card"><h3>تحویل سریع</h3><p>در محدوده مشهد تحویل زیر ۲ ساعت.</p></div>
+<div class="card"><h3>طعم اصیل</h3><p>دستور پخت سنتی خانواده‌های مشهدی.</p></div>
+</div>
+</section>
+<footer>
+نانوایی سنتی مشهد &copy; 1405 | تماس: 051-XXXXXXX | مشهد، خیابان نمونه
+</footer>
+</div>
+</body>
+</html>
